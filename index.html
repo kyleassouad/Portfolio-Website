@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2ecc71;  /* Main accent color */
+            --dark: #2c3e50;     /* Dark background */
+            --light: #ecf0f1;    /* Light text */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        #hero {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: var(--dark);
+            color: white;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        .project-image {
+            height: 200px;
+            background: #ddd;
+            background-image: url('https://placehold.co/600x400');
+            background-size: cover;
+        }
+
+        /* About Section */
+        #about {
+            padding: 4rem 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .skill {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #1a252f;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero">
+        <h1>John Doe</h1>
+        <p class="tagline">Full-Stack Developer | Building Digital Solutions</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate developer with 3+ years of experience building web applications...</p>
+        
+        <div class="skills">
+            <span class="skill"><i class="fas fa-code"></i> CSharp</span>
+<span class="skill"><i class="fab fa-python"></i> Python</span>
+<span class="skill"><i class="fas fa-code"></i> Lua</span>
+<span class="skill"><i class="fab fa-html5"></i> HTML</span>
+<span class="skill"><i class="fab fa-css3-alt"></i> CSS</span>
+<span class="skill"><i class="fab fa-js"></i> JavaScript</span>
+
+            <!-- skills can be added here -->
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <div class="project-image"></div>
+                <div class="project-info">
+                    <h3>E-Commerce Platform</h3>
+                    <p>Built with React & Node.js. Features include payment processing and inventory management.</p>
+                    <div class="tech-stack">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+            <!-- project cards arent added here anymore, go to the projects list down there -->
+        </div>
+    </section>
+
+    
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea rows="5" placeholder="Message"></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>© 2023 John Doe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Add your form handling logic here
+            alert('Thank you for your message! I'll respond shortly.');
+        });
+    </script>
+</body>
+</html>
+
+<!-- Add this CSS after the existing styles -->
+<style>
+    /* Project Modal */
+    .project-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        padding: 2rem;
+        overflow-y: auto; /* Changed from 'auto' to 'scroll' for consistency */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+    }
+
+    .modal-content {
+        background: white;
+        max-width: 800px;
+        width: 100%;
+        border-radius: 8px;
+        padding: 2rem;
+        position: relative;
+        animation: modalFade 0.3s ease;
+        max-height: 90vh; /* Limit height */
+        overflow-y: auto; /* Enable scrolling */
+        margin: 2rem 0; /* Add space at top/bottom */
+    }
+
+    @keyframes modalFade {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    body.modal-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+    }
+
+    .modal-header {
+        margin-bottom: 2rem;
+    }
+
+    .modal-hero-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin: 1rem 0;
+    }
+
+    .modal-body img {
+        max-width: 100%;
+        margin: 1rem 0;
+        border-radius: 4px;
+    }
+</style>
+
+<!-- Add this modal HTML before the footer -->
+<div class="project-modal" id="projectModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div class="modal-header">
+            <h1 id="modalTitle"></h1>
+            <img id="modalHero" class="modal-hero-image" src="" alt="">
+        </div>
+        <div class="modal-body" id="modalContent"></div>
+    </div>
+</div>
+
+<script>
+    // Project Data - Easy to add new projects
+    const projects = [
+        {
+            id: 1,
+            title: "E-Commerce Platform",
+            image: "https://placehold.co/600x400",
+            techStack: ["React", "Node.js", "MongoDB"],
+            content: `
+                <h2>Project Overview</h2>
+                <p>A full-featured e-commerce solution with real-time inventory tracking and payment processing.</p>
+                <img src="https://placehold.co/600x300" alt="Dashboard Preview">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>User authentication system</li>
+                    <li>Stripe payment integration</li>
+                    <li>Admin dashboard</li>
+                </ul>
+                <p><strong>Outcome:</strong> Increased client sales by 150% in first quarter</p>
+            `
+        },
+        {
+            id: 2,
+            title: "Task Management App",
+            image: "https://placehold.co/600x400",
+            techStack: ["Vue.js", "Firebase", "Sass"],
+            content: `
+                <h2>Collaborative Task Management</h2>
+                <p>Real-time team collaboration tool with drag-and-drop functionality.</p>
+                <img src="https://placehold.co/600x300" alt="Interface Preview">
+                <img src="https://placehold.co/600x300" alt="Interface Preview">
+                <h3>Technical Challenges</h3>
+                <p>Implemented WebSocket communication for real-time updates...</p>
+                <p>Implemented WebSocket communication for real-time updates...</p>
+                <p>Implemented WebSocket communication for real-time updates...</p>
+                <p>Implemented WebSocket communication for real-time updates...</p>
+                <p>Implemented WebSocket communication for real-time updates...</p>
+                <p>Implemented WebSocket communication for real-time updates...</p>
+                <p>Implemented WebSocket communication for real-time updates...</p>
+                <p>Implemented WebSocket communication for real-time updates...</p>
+                <p>Implemented WebSocket communication for real-time updates...</p>
+                <p>Implemented WebSocket communication for real-time updates...</p>
+                <p>Implemented WebSocket communication for real-time updates...</p>
+                <p>Implemented WebSocket communication for real-time updates...</p>
+            `
+        },
+        {
+            id: 3,
+            title: "Task Management App",
+            image: "https://placehold.co/600x400",
+            techStack: ["Vue.js", "Firebase", "Sass"],
+            content: `
+                <h2>Collaborative Task Management</h2>
+                <p>Real-time team collaboration tool with drag-and-drop functionality.</p>
+                <img src="https://placehold.co/600x300" alt="Interface Preview">
+                <h3>Technical Challenges</h3>
+                <p>Implemented WebSocket communication for real-time updates...</p>
+            `
+        },
+        {
+            id: 4,
+            title: "Task Management App",
+            image: "https://placehold.co/600x400",
+            techStack: ["Vue.js", "Firebase", "Sass"],
+            content: `
+                <h2>Collaborative Task Management</h2>
+                
+            `
+        }
+    ];
+
+    // Generate Project Cards
+    function renderProjects() {
+        const grid = document.querySelector('.projects-grid');
+        grid.innerHTML = projects.map(project => `
+            <div class="project-card" onclick="openModal(${project.id})">
+                <div class="project-image" style="background-image: url('${project.image}')"></div>
+                <div class="project-info">
+                    <h3>${project.title}</h3>
+                    <div class="tech-stack">
+                        ${project.techStack.map(tech => `<span>${tech}</span>`).join('')}
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Modal Functions
+    function openModal(projectId) {
+        document.body.classList.add('modal-open');
+        const project = projects.find(p => p.id === projectId);
+        document.getElementById('projectModal').style.display = 'flex';
+        document.getElementById('modalTitle').textContent = project.title;
+        document.getElementById('modalHero').src = project.image;
+        document.getElementById('modalContent').innerHTML = project.content;
+    }
+
+    function closeModal() {
+        document.body.classList.remove('modal-open');
+        document.getElementById('projectModal').style.display = 'none';
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('projectModal');
+        if (event.target === modal) {
+            closeModal();
+        }
+    };
+
+    // Initialize projects on page load
+    document.addEventListener('DOMContentLoaded', renderProjects);
+</script>
